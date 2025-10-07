@@ -1,6 +1,10 @@
 <?php 
 session_start();
 $_SESSION['dashboard'] = true;
+if(!isset($_SESSION['id'])){
+  echo "Access denied!";
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
